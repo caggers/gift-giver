@@ -32,10 +32,12 @@ describe('Gift', () => {
   });
 
   describe('when typing into the present input', () => {
-    const present ='Gold Watch';
+    const present = 'Gold Watch';
 
     beforeEach(() => {
-      gift.find('.input-present').simulate('change', { target: { value: present } });
+      gift
+        .find('.input-present')
+        .simulate('change', { target: { value: present } });
     });
 
     it('updates the present n `state`', () => {
@@ -51,6 +53,5 @@ describe('Gift', () => {
     it('calls the removeGift callback', () => {
       expect(mockRemove).toHaveBeenCalledWith(id);
     });
-
   });
 });
