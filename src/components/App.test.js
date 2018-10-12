@@ -4,7 +4,7 @@ import App from './App';
 
 import { render } from 'react-testing-library';
 
-// Basic test for hecking the h2
+// Basic test for checking the h2
 it('renders without crashing', () => {
   const wrapper = shallow(<App />);
   const welcome = <h2>Welcome</h2>;
